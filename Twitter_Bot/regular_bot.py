@@ -1,9 +1,10 @@
-mport twitter
+import twitter
+import params
 
-auth = twitter.OAuth(consumer_key="",
-consumer_secret="",
-token="",
-token_secret="")
+auth = twitter.OAuth(consumer_key=params.consumer_key,
+consumer_secret=params.consumer_secret,
+token=params.token,
+token_secret=params.token_secret)
 
 t = twitter.Twitter(auth=auth)
 
