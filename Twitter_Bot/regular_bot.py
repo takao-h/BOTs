@@ -1,5 +1,6 @@
 import twitter
 import params
+import message
 
 auth = twitter.OAuth(consumer_key=params.consumer_key,
 consumer_secret=params.consumer_secret,
@@ -9,7 +10,7 @@ token_secret=params.token_secret)
 t = twitter.Twitter(auth=auth)
 
 #ツイートのみ
-status="Hello,World" #投稿するツイート
+status=message.default #投稿するツイート
 t.statuses.update(status=status) #Twitterに投稿
 
 #画像付きツイート
